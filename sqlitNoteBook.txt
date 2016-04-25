@@ -1,0 +1,47 @@
+##背景
+其实做开发了解下数据库知识感觉还是很有必要的，这里我就简单的做个数据库知识的入门教程，旨在让我们快速的了解数据库，看了一些基本的语句不至于完全迷茫。
+##基本语句
+1. create语句：新建一个表格 
+create table <表格名字>(表格的数据格式)
+create table tablename (name varchar(15),id integer);
+2. insert语句：列表插入新的行
+insert into <表名称> values (值1，值2...);  INSERT INTO <表名称> (列1, 列2,...) VALUES (值1, 值2,....)
+insert into tablename values ( "first item",1);
+insert into tablename (name) values ("second item")
+3. select语句:选取数据
+select <列名称> from <表名称>
+select * from <表名称>   //*w是通配符表示任意列。
+select name from tablename;
+select * from tablename;
+4. distinct语句：取出不同的语句
+select distinct <列名称> from <表名称>
+select distinct id from tablename;
+5. where语句：查询语句
+select <列名称> from <表名称> where <列> <运算符> <值>
+|操作符| 	描述|
+|:----:|:-------|
+|= 	|等于|
+|<> 	|不等于|
+|> 	|大于|
+|< 	|小于|
+|>= 	|大于等于|
+|<= 	|小于等于|
+|between 	|在某个范围内|
+|like 	|搜索某种模式|
+6. and和or语句：运算符用于基于一个以上的条件对记录进行过滤。
+select * from tablename where name='first item' and id='1'
+7. order by语句：用于排序
+desc表示降序排列 asc表示升序排列；默认升序排列。用法一般如下：select * from <表名> order by <列名称>;
+select * from tablename order by name; 
+select * from tablename order by name id; //表示先按照名字 然后在按照id;
+select * from tablename order by name desc， id asc //先按照名字降序排列 然后在按照id升序排列;
+8. updata语句： 用于修改一个值；
+update <表名称> set <列名称> = <新值> where <列名称> = <某值>;
+9. 
+
+
+
+
+
+
+
